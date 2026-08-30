@@ -1,6 +1,6 @@
 # Basic C language Calculator
 
-This is my first project is C language
+This is my first project in C language
 
 ## Features
 1. ADDITION
