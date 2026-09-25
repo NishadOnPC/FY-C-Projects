@@ -11,14 +11,20 @@ printf("3. MULTIPLICATION\n");
 printf("4. DIVISION\n");
 printf("Choose the operation between 1 to 4:\n");
 scanf("%d",&c);
-if(c>=5)
+if(c < 1 || c > 4)
 {
 printf("INVALID CHOICE");
 return 0;
 }
 
 printf("Enter any 2 numbers:\n");
-scanf("%d %d",&a,&b);
+if (scanf("%d %d",&a,&b) !=2)
+
+{
+printf("ERROR enter valid numbers please.\n");
+return 0;
+
+}
 
 switch(c)
 {
@@ -29,7 +35,7 @@ break;
 
 case 2:
 r=a-b;
-printf("Subtraction is :%d\n,",r);
+printf("Subtraction is :%d\n",r);
 break;
 
 case 3:
