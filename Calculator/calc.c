@@ -10,7 +10,13 @@ printf("2. SUBTRACTION\n");
 printf("3. MULTIPLICATION\n");
 printf("4. DIVISION\n");
 printf("Choose the operation between 1 to 4:\n");
-scanf("%d",&c);
+  
+if(scanf("%d",&c) !=1 )
+{
+  printf("Enter Integer Operation Only");
+  return 0;
+}
+  
 if(c < 1 || c > 4)
 {
 printf("INVALID CHOICE");
