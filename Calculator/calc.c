@@ -1,23 +1,22 @@
-//Nishad:)
-
 #include<stdio.h>
 int main()
 {
-int a,b,c,r;
+char ch;
+int a,b,r;
 printf("---Menu---\n");
-printf("1. ADDITION\n");
-printf("2. SUBTRACTION\n");
-printf("3. MULTIPLICATION\n");
-printf("4. DIVISION\n");
-printf("Choose the operation between 1 to 4:\n");
+printf("A. ADDITION\n");
+printf("S. SUBTRACTION\n");
+printf("M. MULTIPLICATION\n");
+printf("D. DIVISION\n");
+printf("Choose the operation between A to D:\n");
   
-if(scanf("%d",&c) !=1 )
+if(scanf("%c",&ch) !=1 )
 {
-  printf("Enter Integer Operation Only");
+  printf("Enter Designated Operations Only");
   return 0;
 }
   
-if(c < 1 || c > 4)
+if( ch != 'A' && ch != 'S' && ch != 'M' && ch != 'D' )
 {
 printf("INVALID CHOICE");
 return 0;
@@ -32,24 +31,24 @@ return 0;
 
 }
 
-switch(c)
+switch(ch)
 {
-case 1:
+case 'A':
 r=a+b;
 printf("Addition is :%d\n ",r);
 break;
 
-case 2:
+case 'S':
 r=a-b;
 printf("Subtraction is :%d\n",r);
 break;
 
-case 3:
+case 'M':
 r=a*b;
 printf("Multiplication is :%d\n ",r);
 break;
 
-case 4:
+case 'D':
 if (b==0)
 {
 printf("Division by 0 is not possible\n");
